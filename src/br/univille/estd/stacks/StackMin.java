@@ -11,17 +11,14 @@ public class StackMin<E extends Comparable> implements Stack<E> {
 		top = null;
 	}
 
-	@Override
 	public int size() {
 		return size;
 	}
 
-	@Override
 	public boolean isEmpty() {
 		return top == null;
 	}
 
-	@Override
 	public E top() throws EmptyStackException {
 		if (isEmpty()) {
 			throw new EmptyStackException("Não consta");
@@ -29,7 +26,6 @@ public class StackMin<E extends Comparable> implements Stack<E> {
 		return top.getElement();
 	}
 
-	@Override
 	public void push(E element) {
 		Node<E> v = new Node<E>(element, top);
 		top = v;
@@ -46,7 +42,6 @@ public class StackMin<E extends Comparable> implements Stack<E> {
 		}
 	}
 
-	@Override
 	public E pop() throws EmptyStackException {
 		E e;
 		if (isEmpty()) {
@@ -65,7 +60,6 @@ public class StackMin<E extends Comparable> implements Stack<E> {
 		return e;
 	}
 
-	@Override
 	public E min() throws EmptyStackException {
 		if (isEmpty()) {
 			throw new EmptyStackException("Não consta");
@@ -74,7 +68,6 @@ public class StackMin<E extends Comparable> implements Stack<E> {
 		return min;
 	}
 	
-	@Override
 	public String toString() {
 		String stack = "[ ";
 		Node<E> element = top;

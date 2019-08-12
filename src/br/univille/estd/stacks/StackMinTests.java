@@ -100,9 +100,9 @@ public class StackMinTests {
 		stack.push(99);
 		stack.push(52);
 		stack.push(63);
-		stack.push(3);
 		stack.push(10);
 		stack.push(27);
+		stack.push(3);
 		stack.push(42);
 		stack.push(12);
 		stack.push(15);
@@ -112,7 +112,10 @@ public class StackMinTests {
 		stack.pop();
 		assertEquals("O menor elemento da lista deve ser 3",3,(int) stack.min());
 		stack.pop();
-		assertEquals("O menor elemento da lista deve ser 10",10,(int) stack.min());
+		stack.pop();
+		stack.pop();
+		stack.pop();
+		assertEquals("O menor elemento da lista deve ser 1",10,(int) stack.min());
 	}
 	
 
